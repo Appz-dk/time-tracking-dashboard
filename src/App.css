@@ -14,6 +14,7 @@
   --clr-social: hsl(264, 64%, 52%);
   --clr-selfcare: hsl(43, 84%, 65%);
 
+  --fs-300: 0.7rem;
   --fs-400: 0.8rem;
   --fs-500: 1.1rem;
   --fs-600: 1.75rem;
@@ -185,6 +186,7 @@ body {
 
 .task__tracking :last-child {
   font-weight: 300;
+  font-size: var(--fs-400);
   color: var(--clr-blue-200);
 }
 
@@ -213,13 +215,17 @@ body {
   }
 
   .task__tracking :last-child {
-    font-size: var(--fs-400);
+    font-size: var(--fs-300);
   }
 }
 
-@media (min-width: 50em) {
+@media (min-width: 55em) {
   .task__tracking :first-child {
     font-size: var(--fs-800);
+  }
+
+  .task__tracking :last-child {
+    font-size: var(--fs-400);
   }
 }
 

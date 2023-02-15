@@ -1,4 +1,5 @@
 import { ReactComponent as Ellipses } from "../images/icon-ellipsis.svg";
+import { View } from "./Dashboard";
 
 type TrackingData = {
   current: number;
@@ -14,7 +15,7 @@ type TrackingTimeframes = {
 type TaskProps = {
   title: string;
   trackingData: TrackingTimeframes;
-  view: "daily" | "weekly" | "monthly";
+  view: View;
   icon: string;
 };
 

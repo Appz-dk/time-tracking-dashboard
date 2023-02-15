@@ -8,6 +8,7 @@ import selfcare from "../images/icon-selfcare.svg";
 import social from "../images/icon-social.svg";
 import work from "../images/icon-work.svg";
 import study from "../images/icon-study.svg";
+import { View } from "./Dashboard";
 
 const iconsObj: Record<string, string> = {
   Exercise: exercise,
@@ -18,7 +19,7 @@ const iconsObj: Record<string, string> = {
   Study: study,
 };
 
-const Tasks = () => {
+const Tasks: React.FC<{ view: View }> = ({ view }) => {
   return (
     <>
       {taskData.map((task) => (
@@ -27,7 +28,7 @@ const Tasks = () => {
           icon={iconsObj[task.title]}
           title={task.title}
           trackingData={task.timeframes}
-          view="weekly"
+          view={view}
         />
       ))}
     </>

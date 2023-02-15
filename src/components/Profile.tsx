@@ -1,5 +1,6 @@
 import { useState } from "react";
 import profilePic from "../images/image-jeremy.png";
+import { isView, View } from "./Dashboard";
 
 // "pretent this is a request to the backend"
 const profile = {
@@ -8,8 +9,20 @@ const profile = {
 
 const actions = ["Daily", "Weekly", "Monthly"];
 
-const Profile = () => {
+type ProfileProps = {
+  handleViewChange: (view: View) => void;
+};
+
+const Profile: React.FC<ProfileProps> = ({ handleViewChange }) => {
   const [showTimeframe, setShowTimeframe] = useState(actions[1]);
+
+  const handleTimeframeChange = (action: string) => {
+    setShowTimeframe(action);
+    const view = action.toLowerCase();
+    if (isView(view)) {
+      handleViewChange(view);
+    }
+  };
 
   return (
     <div className="profile__container">
@@ -28,7 +41,7 @@ const Profile = () => {
             <li key={action}>
               <button
                 aria-selected={showTimeframe === action ? true : false}
-                onClick={() => setShowTimeframe(action)}
+                onClick={() => handleTimeframeChange(action)}
               >
                 {action}
               </button>
