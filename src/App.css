@@ -90,6 +90,10 @@ body {
   cursor: pointer;
 }
 
+.profile__actions button:hover {
+  color: var(--clr-blue-100);
+}
+
 .profile__actions button[aria-selected="true"] {
   color: white;
 }
@@ -121,22 +125,23 @@ body {
 
 /* Task styling */
 .task__container {
+  z-index: 0;
   padding-top: var(--padding);
   border-radius: var(--border-rad);
   position: relative;
   overflow: hidden;
-  z-index: -2;
 }
 
 .task__container > figure {
+  z-index: -1;
   position: absolute;
   max-width: fit-content;
   right: 1rem;
   top: -0.6rem;
-  z-index: -1;
 }
 
 .task__info {
+  z-index: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -144,6 +149,16 @@ body {
   border-radius: var(--border-rad);
   background-color: var(--clr-blue-600);
   color: white;
+  cursor: pointer;
+}
+
+.task__info:hover {
+  background-color: var(--clr-blue-300);
+}
+
+/* Never forget that 'path' has to be added at the end! */
+.task__svg-icon:hover path {
+  fill: #ffffff;
 }
 
 .task__title {

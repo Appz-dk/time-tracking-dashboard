@@ -1,4 +1,4 @@
-import elipses from "/images/icon-ellipsis.svg";
+import { ReactComponent as Ellipses } from "../images/icon-ellipsis.svg";
 
 type TrackingData = {
   current: number;
@@ -36,9 +36,7 @@ const Task: React.FC<TaskProps> = ({ title, trackingData, view, icon }) => {
       <div className="task__info">
         <div className="task__title">
           <p>{title}</p>
-          <figure>
-            <img src={elipses} alt="options button" />
-          </figure>
+          <Ellipses className="task__svg-icon" />
         </div>
         <div className="task__tracking">
           <p>{trackingData[view].current}hrs</p>

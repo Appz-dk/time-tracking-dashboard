@@ -1,5 +1,5 @@
 import { useState } from "react";
-import profilePic from "/images/image-jeremy.png";
+import profilePic from "../images/image-jeremy.png";
 
 // "pretent this is a request to the backend"
 const profile = {
