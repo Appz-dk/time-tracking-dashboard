@@ -1,0 +1,87 @@
+/* CSS Variables */
+:root {
+  --clr-blue-100: hsl(236, 100%, 95%);
+  --clr-blue-200: hsl(236, 100%, 87%);
+  --clr-blue-300: hsl(235, 45%, 61%);
+  --clr-blue-400: hsl(246, 80%, 60%);
+  --clr-blue-600: hsl(235, 46%, 20%);
+  --clr-blue-800: hsl(226, 43%, 10%);
+
+  --clr-work: hsl(15, 100%, 70%);
+  --clr-play: hsl(195, 74%, 62%);
+  --clr-study: hsl(348, 100%, 68%);
+  --clr-exercise: hsl(145, 58%, 55%);
+  --clr-social: hsl(264, 64%, 52%);
+  --clr-selfcare: hsl(43, 84%, 65%);
+
+  --fs-500: 1.1rem;
+  --ff-primary: "Rubik", sans-serif;
+}
+
+/* Body */
+body {
+  --border-rad: 1rem;
+  --padding: 2rem;
+  --padding-small: 1rem;
+  font-family: var(--ff-primary);
+  background-color: var(--clr-blue-800);
+
+  display: grid;
+  place-items: center;
+}
+
+/* Profile Styling */
+.profile__container {
+  background-color: var(--clr-blue-600);
+  border-radius: var(--border-rad);
+}
+
+.profile__info {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding: var(--padding);
+  color: var(--clr-blue-200);
+  background-color: var(--clr-blue-400);
+  border-radius: var(--border-rad);
+}
+
+.profile__info h1 {
+  color: var(--clr-blue-100);
+  font-weight: 300;
+}
+
+.profile__info img {
+  border-radius: 50%;
+  border: 4px solid white;
+  width: 4.5rem;
+}
+
+.profile__actions {
+  padding: var(--padding-small);
+}
+
+.profile__actions ul {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.profile__actions li {
+  max-width: fit-content;
+}
+
+.profile__actions button {
+  color: var(--clr-blue-200);
+  opacity: 0.8;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.profile__actions button[aria-selected="true"] {
+  color: white;
+}
