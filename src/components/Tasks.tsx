@@ -23,6 +23,7 @@ const Tasks = () => {
     <>
       {taskData.map((task) => (
         <Task
+          key={task.title}
           icon={iconsObj[task.title]}
           title={task.title}
           trackingData={task.timeframes}

@@ -1,11 +1,11 @@
 import Profile from "./Profile";
-import Task from "./Task";
+import Tasks from "./Tasks";
 
 const Dashboard = () => {
   return (
     <section className="dashboard__container">
       <Profile />
-      {/* <Tasks /> */}
+      <Tasks />
     </section>
   );
 };

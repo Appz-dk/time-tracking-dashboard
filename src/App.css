@@ -15,6 +15,7 @@
   --clr-selfcare: hsl(43, 84%, 65%);
 
   --fs-500: 1.1rem;
+  --fs-600: 1.75rem;
   --ff-primary: "Rubik", sans-serif;
 }
 
@@ -84,4 +85,63 @@ body {
 
 .profile__actions button[aria-selected="true"] {
   color: white;
+}
+
+/* Task styling */
+.task__container {
+  padding-top: var(--padding);
+  border-radius: var(--border-rad);
+  position: relative;
+  overflow: hidden;
+  z-index: -2;
+}
+
+.task__container > figure {
+  position: absolute;
+  max-width: fit-content;
+  right: 1rem;
+  top: -0.6rem;
+  z-index: -1;
+}
+
+.task__info {
+  padding: var(--padding-small);
+  border-radius: var(--border-rad);
+  background-color: var(--clr-blue-600);
+  color: white;
+}
+
+.task__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 500;
+}
+
+.task__title p {
+  font-size: var(--ff-primary);
+}
+
+.task__tracking {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.task__tracking :first-child {
+  font-size: var(--fs-600);
+  font-weight: 300;
+}
+
+.task__tracking :last-child {
+  font-weight: 300;
+  color: var(--clr-blue-200);
+}
+
+/* Layout */
+
+.dashboard__container {
+  display: grid;
+  gap: 1.5rem;
+  padding-block: 4rem;
 }

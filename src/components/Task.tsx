@@ -33,19 +33,20 @@ const Task: React.FC<TaskProps> = ({ title, trackingData, view, icon }) => {
       <figure>
         <img src={icon} alt="Svg that matches the task" />
       </figure>
-      <div className="task">
+      <div className="task__info">
         <div className="task__title">
           <p>{title}</p>
           <figure>
             <img src={elipses} alt="options button" />
           </figure>
         </div>
-        <div className="task_tracking">
+        <div className="task__tracking">
           <p>{trackingData[view].current}hrs</p>
           <p>
             {view === "daily"
               ? "Yesterday"
-              : `last ${view.substring(0, -2)}` + `- ${trackingData[view].previous}`}
+              : `Last ${view.charAt(0).toUpperCase() + view.slice(1, -2)}`}
+            {` - ${trackingData[view].previous}hrs`}
           </p>
         </div>
       </div>
