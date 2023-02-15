@@ -205,7 +205,6 @@ body {
   display: grid;
   gap: var(--grid-gap);
   padding-block: 4rem;
-  height: 55vh;
 }
 
 @media (min-width: 45em) {
@@ -213,6 +212,7 @@ body {
     grid-template-columns: repeat(4, 1fr);
     padding-block: revert;
     padding-inline: var(--padding);
+    height: 55vh;
   }
 
   .profile__container {
