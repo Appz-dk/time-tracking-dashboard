@@ -18,10 +18,10 @@
   --fs-500: 1.1rem;
   --fs-600: 1.75rem;
   --fs-700: 2rem;
-  --fs-800: 2.5rem;
+  --fs-800: 3rem;
   --ff-primary: "Rubik", sans-serif;
 
-  --card-width: 12rem;
+  --card-width: 13rem;
   --card-height: 15rem;
 }
 
@@ -94,7 +94,7 @@ body {
   color: white;
 }
 
-@media (min-width: 40em) {
+@media (min-width: 45em) {
   .profile__container {
     max-width: var(--card-width);
     max-height: calc(var(--card-height) * 2 + var(--grid-gap));
@@ -106,7 +106,6 @@ body {
     align-items: start;
     gap: 2rem;
     font-size: var(--fs-400);
-    padding: 1.5rem;
   }
 
   .profile__info h1 {
@@ -171,7 +170,7 @@ body {
   color: var(--clr-blue-200);
 }
 
-@media (min-width: 40em) {
+@media (min-width: 45em) {
   .task__container {
     max-width: var(--card-width);
     max-height: var(--card-height);
@@ -206,13 +205,14 @@ body {
   display: grid;
   gap: var(--grid-gap);
   padding-block: 4rem;
+  height: 55vh;
 }
 
-@media (min-width: 40em) {
+@media (min-width: 45em) {
   .dashboard__container {
-    height: 50vh;
     grid-template-columns: repeat(4, 1fr);
     padding-block: revert;
+    padding-inline: var(--padding);
   }
 
   .profile__container {
