@@ -137,6 +137,9 @@ body {
 }
 
 .task__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding: var(--padding-small);
   border-radius: var(--border-rad);
   background-color: var(--clr-blue-600);
@@ -174,7 +177,7 @@ body {
   .task__container {
     max-width: var(--card-width);
     max-height: var(--card-height);
-    padding: revert;
+    /* padding: revert; */
   }
 
   .task__info {
@@ -190,11 +193,18 @@ body {
   }
 
   .task__tracking :first-child {
-    font-size: var(--fs-800);
+    line-height: 1.2;
+    font-size: var(--fs-700);
   }
 
   .task__tracking :last-child {
     font-size: var(--fs-400);
+  }
+}
+
+@media (min-width: 50em) {
+  .task__tracking :first-child {
+    font-size: var(--fs-800);
   }
 }
 
@@ -205,6 +215,7 @@ body {
   display: grid;
   gap: var(--grid-gap);
   padding-block: 4rem;
+  padding-inline: 0.5rem;
 }
 
 @media (min-width: 45em) {
