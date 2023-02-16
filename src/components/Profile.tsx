@@ -40,7 +40,7 @@ const Profile: React.FC<ProfileProps> = ({ handleViewChange }) => {
           {actions.map((action) => (
             <li key={action}>
               <button
-                aria-selected={showTimeframe === action ? true : false}
+                data-active={showTimeframe === action ? true : false}
                 onClick={() => handleTimeframeChange(action)}
               >
                 {action}

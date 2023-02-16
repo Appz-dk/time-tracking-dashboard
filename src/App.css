@@ -108,7 +108,7 @@ body {
   color: var(--clr-blue-100);
 }
 
-.profile__actions button[aria-selected="true"] {
+.profile__actions button[data-active="true"] {
   color: white;
 }
 
